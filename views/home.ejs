@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<head>
+
+</head>
+<body>
+    <style>
+        table, th, td {
+          border: 3px solid blue;
+          border-collapse: collapse;
+        }
+        </style>
+    <div style="display: flex;">
+
+    <table style="margin: 15px;">
+        <thead>
+            <tr>
+                <td>
+                    1
+                </td>
+            </tr>
+        </thead>
+        <tbody >
+            <% meals && meals.map((item)=>{ %>
+                <tr>
+                    <td>Adı: <%= item.strArea %></td>
+                </tr>
+            <% }) %>
+        </tbody>
+    </table>
+
+    <table style="margin: 15px;">
+        <thead>
+            <tr>
+                <td>
+                    2
+                </td>
+            </tr>
+        </thead>
+        <tbody >
+            <% categories && categories.map((item)=>{ %>
+
+                <tr>
+                    <td>Adı: <%= item.strCategory %></td>
+                    <td><img height="40px"width="40px" src="<%= item.strCategoryThumb %>"/> </td>
+                </tr>
+            <% }) %>
+        </tbody>
+    </table>
+
+</div>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</body>
